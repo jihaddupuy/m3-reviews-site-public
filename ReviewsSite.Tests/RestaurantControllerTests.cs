@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using ReviewsSite.Controllers;
 using System;
 using Xunit;
@@ -12,9 +13,9 @@ namespace ReviewsSite.Tests
             //Arrange
             RestaurantController sut = new RestaurantController();
             //Act
-
+            var result = sut.Index();
             //Assert
-             
+            Assert.IsType<ViewResult>(result);
         }
     }
 }
