@@ -4,13 +4,13 @@ using Xunit;
 
 namespace ReviewsSite.Tests
 {
-    public class ReviewControllerTests
+    public class RestaurantControllerTests
     {
         [Fact]
         public void Index_Returns_A_View()
         {
             //Arrange
-            ReviewController sut = new ReviewController();
+            RestaurantController sut = new RestaurantController();
             //Act
 
             //Assert

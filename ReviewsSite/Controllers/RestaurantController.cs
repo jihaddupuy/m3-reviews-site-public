@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ReviewsSite.Controllers
 {
-    public class ReviewController
+    public class RestaurantController
     {
     }
 }
