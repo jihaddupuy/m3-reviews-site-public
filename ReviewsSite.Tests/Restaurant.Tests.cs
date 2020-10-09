@@ -13,14 +13,20 @@ namespace ReviewsSite.Tests
         Restaurant sut;
         public RestaurantTests()
         {
-            sut = new Restaurant();
+            sut = new Restaurant(42, "Restaurant name");
         }
 
         [Fact]
-        public void RestaurantConstructor_Sets_Id_On_CourseModel()
+        public void RestaurantConstructor_Sets_Id_On_RestaurantModel()
         {
             int result = sut.Id;
             Assert.Equal(42, result);
+        }
+        [Fact]
+        public void RestaurantConstructor_Sets_Name_On_RestaurantModel()
+        {
+            string result = sut.Name;
+            Assert.Equal("Restaurant name", result);
         }
     }
 }
