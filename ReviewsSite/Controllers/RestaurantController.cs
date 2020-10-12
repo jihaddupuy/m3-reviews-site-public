@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ReviewsSite.Models;
+using ReviewsSite.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,10 @@ namespace ReviewsSite.Controllers
     {
         public ViewResult Index()
         {
-            Restaurant restaurant = new Restaurant();
-            return View(restaurant);
+            RestaurantRepository restaurantRepo = new RestaurantRepository();
+            var model = restaurantRepo.GetAll();
+
+            return View(model);
         }
     }
 }

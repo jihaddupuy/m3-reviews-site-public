@@ -16,8 +16,12 @@ namespace ReviewsSite.Repositories
                 new Restaurant(1, ""),
                 new Restaurant(2, ""),
                 new Restaurant(3, "")
-            }
+            };
         }
-
+        public IEnumerable<Restaurant> GetAll()
+        {
+            return restaurantList;
+        }
+            
     }
 }
