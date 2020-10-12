@@ -22,6 +22,10 @@ namespace ReviewsSite.Repositories
         {
             return restaurantList;
         }
+        public Restaurant GetByID(int id)
+        {
+            return restaurantList.Single(c => c.Id == id);
+        }
             
     }
 }
