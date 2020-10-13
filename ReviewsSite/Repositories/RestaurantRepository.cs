@@ -13,9 +13,9 @@ namespace ReviewsSite.Repositories
         {
             restaurantList = new List<Restaurant>()
             {
-                new Restaurant(1, ""),
-                new Restaurant(2, ""),
-                new Restaurant(3, "")
+                new Restaurant(1, "Restaurant 1"),
+                new Restaurant(2, "Restaurant 2"),
+                new Restaurant(3, "Restaurant 3")
             };
         }
         public IEnumerable<Restaurant> GetAll()

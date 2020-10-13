@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace ReviewsSite.Repositories
 {
-    public class IRepository
+    public interface IRepository<T> where T : class
     {
+        IEnumerable<T> GetAll();
     }
 }
