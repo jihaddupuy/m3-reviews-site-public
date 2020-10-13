@@ -13,16 +13,16 @@ namespace ReviewsSite.Repositories
         {
             restaurantList = new List<Restaurant>()
             {
-                new Restaurant(1, "Restaurant 1"),
-                new Restaurant(2, "Restaurant 2"),
-                new Restaurant(3, "Restaurant 3")
+                new Restaurant(1, "Restaurant 1","category","description","review"),
+                new Restaurant(2, "Restaurant 2","category","description","review"),
+                new Restaurant(3, "Restaurant 3","category","description","review")
             };
         }
         public IEnumerable<Restaurant> GetAll()
         {
             return restaurantList;
         }
-        public Restaurant GetByID(int id)
+        public Restaurant GetById(int id)
         {
             return restaurantList.Single(c => c.Id == id);
         }

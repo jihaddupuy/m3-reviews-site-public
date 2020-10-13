@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<ReviewsSite.Models.Restaurant>
 @{
     Layout = null;
 }
@@ -8,10 +8,16 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>RestaurantIndex</title>
 </head>
 <body>
     <h1>We Can Eat It!</h1>
+   @foreach (var restaurant in Model)
+   {
+       <p>Title: <span>@restaurant.Name</span></p>
+       <p>Description:<span>@restaurant.Description</span></p>
+       <hr />
+   }
     <span>Reviews of restaurants we've enjoyed</span>
     <main class ="main container">
         <section id="Cleveland">
