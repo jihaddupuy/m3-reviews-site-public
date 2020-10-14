@@ -13,18 +13,20 @@ namespace ReviewsSite.Models
         public string Description { get; set; }
         public string Category { get; set; }
         public string Review { get; set; }
+        public string Image { get; set; }
 
         public Restaurant()
         {
 
         }
-        public Restaurant(int id, string name, string description, string category, string review)
+        public Restaurant(int id, string name, string description, string category, string review, string image)
         {
             Id = id;
             Name = name;
             Description = description;
             Category = category;
             Review = review;
+            Image = image;
         }
 
 
