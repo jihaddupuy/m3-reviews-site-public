@@ -21,11 +21,18 @@
         </section>
     </main>
     <h1>We Can Eat It!</h1>
-    @foreach (var restaurant in Model)
+    <h2>Restaurnt List</h2>
+
+    @foreach (var caurse in Model)
     {
-        <p>Title: <span>@restaurant.Name</span></p>
-        <p>Description:<span>@restaurant.Description</span></p>
+        <p>Title; <a href="/Course/Index">Return to Courses List</a> </p>
         <hr />
     }
 </body>
 </html>
+     @*//@foreach (var restaurant in Model)
+//  {
+// <p>Title: <span>@restaurant.Name</span></p>
+// <p>Description:<span>@restaurant.Description</span></p>
+//  <hr />
+// }@*@

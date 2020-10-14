@@ -12,7 +12,7 @@ namespace ReviewsSite.Controllers
     {
         IRepository<Restaurant> restaurantRepo;
 
-        public RestaurantController(IRepository<Restaurant> restaurntRepo)
+        public RestaurantController(IRepository<Restaurant> restaurantRepo)
         {
             this.restaurantRepo = restaurantRepo;
         }
