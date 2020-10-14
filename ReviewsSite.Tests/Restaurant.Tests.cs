@@ -13,7 +13,7 @@ namespace ReviewsSite.Tests
         Restaurant sut;
         public RestaurantTests()
         {
-            sut = new Restaurant(42, "Restaurant name");
+            sut = new Restaurant(42, "Restaurant name","","","","");
         }
 
         [Fact]
