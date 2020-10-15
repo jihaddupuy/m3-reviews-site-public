@@ -14,7 +14,8 @@ namespace ReviewsSite.Models
         public string Category { get; set; }
         public string Review { get; set; }
         public string Image { get; set; }
-
+        public int ReviewId { get; set; }
+        public virtual Reviews Reviews { get; set; }
         public Restaurant()
         {
 

@@ -10,11 +10,13 @@ namespace ReviewsSite
     public class DiningContext : DbContext 
     {
         public DbSet<Restaurant> Restaurants { get; set; }
+        public DbSet<Reviews> Reviews { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var connectionString = "Server=(localdb)\\mssqllocaldb;Database=DiningDB;Trusted_Connection=True";
 
-            optionsBuilder.UseSqlServer(connectionString);
+            optionsBuilder.UseSqlServer(connectionString)
+            .UseLazyLoadingProxies();
 
             base.OnConfiguring(optionsBuilder);
         }
@@ -39,7 +41,7 @@ namespace ReviewsSite
                     Name = "bd's Mongolian Grill",
                     Category = "Asian BBQ",
                     Description = "Asian food grilled for you in front of you",
-                    Review = "One of my favorite places to good for asian grilled food highly recommend",
+                    Review = "One of my favorite places to go for good asian grilled food, highly recommend",
                     Image = ""
                 },
 
@@ -53,6 +55,28 @@ namespace ReviewsSite
                     Image = ""
                     
                 });
+
+            modelBuilder.Entity<Reviews>().HasData(
+                new Reviews()
+                {
+                    Id = 1,
+                    Name = "Brian"
+                },
+
+
+                new Reviews()
+                {
+                    Id = 2,
+                    Name = "Jihad"
+                },
+
+                new Reviews()
+                {
+                    Id = 3,
+                    Name = "Hugh"
+                }
+
+                );
 
             base.OnModelCreating(modelBuilder);
                 
