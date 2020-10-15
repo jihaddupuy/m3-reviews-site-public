@@ -53,6 +53,8 @@ namespace ReviewsSite
                     Image = ""
                     
                 });
+
+            base.OnModelCreating(modelBuilder);
                 
         }
 
