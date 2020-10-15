@@ -30,8 +30,9 @@ namespace ReviewsSite
                     Name = "Alley Cat Oyster Bar",
                     Category = "Seafood",
                     Description = "Cleveland best seafood served on the best patio in town.",
-                    Review = "Top notch food and setting,the staff was friendly and knowledgable about the variety of seafood.Highly recommended.",
-                    Image =  ""
+                    Image =  "",
+                    
+                    
 
                 },
 
@@ -41,8 +42,9 @@ namespace ReviewsSite
                     Name = "bd's Mongolian Grill",
                     Category = "Asian BBQ",
                     Description = "Asian food grilled for you in front of you",
-                    Review = "One of my favorite places to go for good asian grilled food, highly recommend",
-                    Image = ""
+                    Image = "",
+                    
+                   
                 },
 
                 new Restaurant
@@ -51,8 +53,8 @@ namespace ReviewsSite
                     Name = "Tommy's On Coventry",
                     Category = "Diner",
                     Description = "Upscale family restaurant",
-                    Review = "By keeping its focus on balancing its menu between quality meat and vegetable entrees (and at an affordable price) Tommy's achieves its goal of creating  a watering hole where the carnivores and herbivores in your family can graze in peace.",
-                    Image = ""
+                    Image = "",
+                    
                     
                 });
 
@@ -60,20 +62,23 @@ namespace ReviewsSite
                 new Reviews()
                 {
                     Id = 1,
-                    Name = "Brian"
+                    Content = "Top notch food and setting,the staff was friendly and knowledgable about the variety of seafood.Highly recommended.",
+                    RestaurantId = 1
                 },
 
 
                 new Reviews()
                 {
                     Id = 2,
-                    Name = "Jihad"
+                    Content = "One of my favorite places to go for good asian grilled food, highly recommended",
+                    RestaurantId = 2
                 },
 
                 new Reviews()
                 {
                     Id = 3,
-                    Name = "Hugh"
+                    Content = "By keeping its focus on balancing its menu between quality meat and vegetable entrees (and at an affordable price) Tommy's achieves its goal of creating  a watering hole where the carnivores and herbivores in your family can graze in peace.",
+                    RestaurantId = 3
                 }
 
                 );
