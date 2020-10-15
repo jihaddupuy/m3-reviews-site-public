@@ -30,7 +30,7 @@ namespace ReviewsSite
                     Name = "Alley Cat Oyster Bar",
                     Category = "Seafood",
                     Description = "Cleveland best seafood served on the best patio in town.",
-                    Image =  "",
+                    Image =  ""
                     
                     
 
@@ -42,7 +42,7 @@ namespace ReviewsSite
                     Name = "bd's Mongolian Grill",
                     Category = "Asian BBQ",
                     Description = "Asian food grilled for you in front of you",
-                    Image = "",
+                    Image = ""
                     
                    
                 },
@@ -53,7 +53,7 @@ namespace ReviewsSite
                     Name = "Tommy's On Coventry",
                     Category = "Diner",
                     Description = "Upscale family restaurant",
-                    Image = "",
+                    Image = ""
                     
                     
                 });

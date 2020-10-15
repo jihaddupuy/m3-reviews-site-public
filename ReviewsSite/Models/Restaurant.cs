@@ -16,7 +16,7 @@ namespace ReviewsSite.Models
         public string Image { get; set; }
         
         
-        public virtual ICollection<Restaurant> Restaurants { get; set; }
+        public virtual ICollection<Reviews> Reviews { get; set; }
         public Restaurant()
         {
 
