@@ -6,25 +6,21 @@ using System.Threading.Tasks;
 
 namespace ReviewsSite.Repositories
 {
-    public class RestaurantRepository
+    public class RestaurantRepository : IRepository<Restaurant>
     {
-        public List<Restaurant> restaurantList;
-        public RestaurantRepository()
+        private DiningContext db;
+        public RestaurantRepository(DiningContext db)
         {
-            restaurantList = new List<Restaurant>()
-            {
-                new Restaurant(1, "Restaurant 1","category","description","review","Image"),
-                new Restaurant(2, "Restaurant 2","category","description","review","Image"),
-                new Restaurant(3, "Restaurant 3","category","description","review","Image")
-            };
+            this.db = db;
         }
+       
         public IEnumerable<Restaurant> GetAll()
         {
-            return restaurantList;
+            return db.Restaurants;
         }
         public Restaurant GetById(int id)
         {
-            return restaurantList.Single(c => c.Id == id);
+            return db.Restaurants.Single(c => c.Id == id);
         }
             
     }
