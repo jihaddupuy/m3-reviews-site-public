@@ -23,9 +23,9 @@
     <h1>We Can Eat It!</h1>
     <h2>Restaurnt List</h2>
 
-    @foreach (var caurse in Model)
+    @foreach (var restaurant in Model)
     {
-        <p>Title; <a href="/Course/Index">Return to Courses List</a> </p>
+        <p>Title; <a href="/Restaurant/Details/@restaurant.Id">@restaurant.Name</a> </p>
         <hr />
     }
 </body>
