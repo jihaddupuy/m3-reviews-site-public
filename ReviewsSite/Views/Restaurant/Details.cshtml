@@ -15,8 +15,14 @@
     <p>Name: <span>@Model.Name</span></p>
     <p>Category: <span>@Model.Category</span></p>
     <p>Description: <span>@Model.Description</span></p>
-    <p>Review: <span>@Model.Reviews</span></p>
+    @foreach (var review in Model.Reviews)
+    {
+        <div>Review: @review.Content</div>
+        <hr />
+    }
     
+
+
     <hr />
     <a href="/Restaurant/Index">Return to Restaurants List</a>
 

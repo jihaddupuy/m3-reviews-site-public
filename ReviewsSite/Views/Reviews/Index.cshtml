@@ -12,9 +12,9 @@
 </head>
 <body>
     <h1>Reviews List</h1>
-    @foreach (var reviews in Model)
+    @foreach (var review in Model)
     {
-        <p>Name: <a href="/Reviews/Details/Reviews/Details/@reviews.Id">@reviews.Content</a></p>
+        <p>Name: <a href="/Reviews/Details/@review.Id">@review.Content</a></p>
         <hr />
     }
     <p><a href="/Restaurant/Index>Return to Restaurant List"></a></p>
