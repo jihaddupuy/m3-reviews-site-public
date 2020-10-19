@@ -1,9 +1,11 @@
 ﻿body {
-    margin:auto;
-    text-align:center;
-    background:purple;
-    opacity: 50;
-    border:solid white;
+    margin: auto;
+    text-align: center;
+    background: purple;
+    opacity: 10;
+    border: solid white;
+    background-image:('file:///C:\Users\student\source\repos\m3-reviews-site-team-jhb\ReviewsSite\wwwroot\Images\artem-beliaikin-Nmrsa7XdDsc-unsplash.jpg');
+    ;
 }
 a{
     color:green;
