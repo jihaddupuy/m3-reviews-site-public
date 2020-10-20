@@ -9,31 +9,32 @@
 
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Details</title>
-        <meta name="viewport" content="width=device-width" />
-        <link rel="stylesheet" type="text/css" href="~/Style/DetailStyleSheet.css" />
-        <link href="~/Style/DetailStyleSheet.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/Style/StyleSheet.css" />
+    <link href="~/Style/StyleSheet.css" rel="stylesheet" />
+    <title>RestaurantIndex</title>
 
 </head>
-    <nav></nav> /*user abil;ity to return to home page.
-<body>
-    <h1>Restaurant Details</h1>
-    <p>Name: <span>@Model.Name</span></p>
-    <p>Category: <span>@Model.Category</span></p>
-    <p>Description: <span>@Model.Description</span></p>
-    <img src="@Model.Image" alt="Restaurant Image" />
-    @foreach (var review in Model.Reviews)
-    {
-        <div>Review: @review.Content</div>
-        <hr />
-    }
-
-    
-
-
-    
-    <a href="/Restaurant/Index">Return to Restaurants List</a>
+     
+    <body>
+        <h1>Restaurant Details</h1>
+        <div>
+            <img src="@Model.Image" alt="Restaurant Image" />
+            <p>Name: <span>@Model.Name</span></p>
+            <p>Category: <span>@Model.Category</span></p>
+            <p>Description: <span>@Model.Description</span></p>
+            @foreach (var review in Model.Reviews)
+            {
+                <div>Review: @review.Content</div>
+                
+            }
+        </div>
 
 
-</body>
+
+
+
+        <a href="/Restaurant/Index">Return to Restaurants List</a>
+
+
+    </body>
 </html>

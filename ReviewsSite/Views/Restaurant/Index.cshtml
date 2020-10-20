@@ -15,16 +15,18 @@
 <body>
 
     <h1>We Can Eat It!</h1>
-    <span>Reviews of restaurants we've enjoyed</span>
-    <main class="main container">
-        
-    </main>
-    <h2>Restaurant List</h2>
+    <article>A comprehensive guide to eating for the Greater Cleveland area, covering any and all eateries and supplying you with the information to finally decide what exactly is for dinner tonight!</article>
+    
+        <main class="main container">
 
-    @foreach (var restaurant in Model)
-    {
-        <p>Title; <a href="/Restaurant/Details/@restaurant.Id">@restaurant.Name</a> </p>
-        <hr />
-    }
+        </main>
+
+
+        @foreach (var restaurant in Model)
+        {
+            <p><a href="/Restaurant/Details/@restaurant.Id">@restaurant.Name</a> </p>
+
+        }
+    
 </body>
 </html>
