@@ -28,5 +28,6 @@ namespace ReviewsSite.Tests
             string result = sut.Name;
             Assert.Equal("Restaurant name", result);
         }
+
     }
 }

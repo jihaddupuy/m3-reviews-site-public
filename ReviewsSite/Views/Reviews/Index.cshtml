@@ -10,13 +10,6 @@
     <meta name="viewport" content="width=device-width" />
     <title>Reviews</title>
 </head>
-<nav>
-    @foreach (var review in Model)
-    {
-    <p>Name: <a href="/Reviews/Details/@review.Id">@review.Content</a></p>
-    
-    }
-</nav>
 <body>
     <h1>Reviews List</h1>
     @foreach (var review in Model)

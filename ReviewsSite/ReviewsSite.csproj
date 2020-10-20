@@ -5,10 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="wwwroot\Images\**" />
-    <Content Remove="wwwroot\Images\**" />
-    <EmbeddedResource Remove="wwwroot\Images\**" />
-    <None Remove="wwwroot\Images\**" />
+    <Compile Remove="wwwroot\NewImages\**" />
+    <Content Remove="wwwroot\NewImages\**" />
+    <EmbeddedResource Remove="wwwroot\NewImages\**" />
+    <None Remove="wwwroot\NewImages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\Style\D.css" />
+    <Content Remove="wwwroot\Style\detailsStylesjeet.css" />
   </ItemGroup>
 
   <ItemGroup>
