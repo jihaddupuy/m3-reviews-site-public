@@ -15,26 +15,26 @@
 
 </head>
      
-    <body>
-        <h1>Restaurant Details</h1>
-        <div>
-            <img src="@Model.Image" alt="Restaurant Image" />
-            <p>Name: <span>@Model.Name</span></p>
-            <p>Category: <span>@Model.Category</span></p>
-            <p>Description: <span>@Model.Description</span></p>
-            @foreach (var review in Model.Reviews)
-            {
-                <div>Review: @review.Content</div>
-                
-            }
-        </div>
+<body>
+    <h1>Restaurant Details</h1>
+    <div>
+        <img src="@Model.Image" alt="Restaurant Image" />
+        <p>Name: <span>@Model.Name</span></p>
+        <p>Category: <span>@Model.Category</span></p>
+        <p>Description: <span>@Model.Description</span></p>
+        @foreach (var review in Model.Reviews)
+        {
+            <div>Review: @review.Content</div>
+
+        }
+    </div>
 
 
 
+    <a href="/Restaurant/Create">Create New Review</a>
+
+    <a href="/Restaurant/Index">Return to Restaurants List</a>
 
 
-        <a href="/Restaurant/Index">Return to Restaurants List</a>
-
-
-    </body>
+</body>
 </html>

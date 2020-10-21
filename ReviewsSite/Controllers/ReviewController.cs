@@ -25,6 +25,20 @@ namespace ReviewsSite.Controllers
             var model = reviewRepo.GetById(id);
             return View(model);
         }
+        [HttpGet]
+        public ViewResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(Reviews reviews)
+        {
+            if (ModelState.IsValid)
+            {
+                reviewsRepo.Create(reviews);
+                return RedirectToAction("Details");
+            }
+            return View(reviews);
 
-    }
+        }
 }

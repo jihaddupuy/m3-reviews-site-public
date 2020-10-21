@@ -13,6 +13,12 @@ namespace ReviewsSite.Repositories
         {
             this.db = db;
         }
+
+        public void Create(Reviews obj)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Reviews> GetAll()
         {
             return db.Reviews;

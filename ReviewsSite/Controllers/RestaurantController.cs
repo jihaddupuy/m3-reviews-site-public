@@ -46,6 +46,7 @@ namespace ReviewsSite.Controllers
                 restaurantRepo.Create(restaurant);
                 return RedirectToAction("Details");
             }
+            return View(restaurant);
         }
     }
 }
