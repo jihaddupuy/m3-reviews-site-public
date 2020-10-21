@@ -9,10 +9,20 @@ namespace ReviewsSite.Models
     {
         public int Id { get; set; }
         public string Content { get; set; }
-
-        public virtual Restaurant Restaurant { get; set; }
-
         public int RestaurantId { get; set; }
 
+        public virtual Restaurant Restaurant { get; set; }
+        public Reviews()
+        {
+
+        }
+        
+
+        public Reviews(int id, string content, int restaurantId)
+        {
+            Id = id;
+            Content = content;
+            RestaurantId = restaurantId;
+        }
     }
 }

@@ -35,10 +35,11 @@ namespace ReviewsSite.Controllers
         {
             if (ModelState.IsValid)
             {
-                reviewsRepo.Create(reviews);
+                reviewRepo.Create(reviews);
                 return RedirectToAction("Details");
             }
             return View(reviews);
 
         }
+    }
 }
