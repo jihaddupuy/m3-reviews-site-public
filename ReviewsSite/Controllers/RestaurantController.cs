@@ -33,5 +33,19 @@ namespace ReviewsSite.Controllers
             return View(model); 
 
         }
+     [HttpGet]
+     public ViewResult Create()
+     {
+            return View();
+     }
+     [HttpPost]
+     public ActionResult Create(Restaurant restaurant)
+        {
+            if (ModelState.IsValid)
+            {
+                restaurantRepo.Create(restaurant);
+                return RedirectToAction("Details");
+            }
+        }
     }
 }
