@@ -24,6 +24,8 @@ namespace ReviewsSite.Controllers
             return View(model);
 
         }
+
+
         public ViewResult Details(int id)
         {
            // RestaurantRepository restaurantRepo = new RestaurantRepository();
@@ -33,20 +35,22 @@ namespace ReviewsSite.Controllers
             return View(model); 
 
         }
-     [HttpGet]
-     public ViewResult Create()
-     {
-            return View();
-     }
-     [HttpPost]
-     public ActionResult Create(Restaurant restaurant)
-        {
-            if (ModelState.IsValid)
-            {
-                restaurantRepo.Create(restaurant);
-                return RedirectToAction("Details");
-            }
-            return View(restaurant);
-        }
+
+         [HttpGet]
+         public ViewResult Create()
+         {
+                return View();
+         }
+
+         [HttpPost]
+         public ActionResult Create(Restaurant restaurant)
+         {
+                if (ModelState.IsValid)
+                {
+                    restaurantRepo.Create(restaurant);
+                    return RedirectToAction("Details");
+                }
+                return View(restaurant);
+         }
     }
 }

@@ -36,7 +36,7 @@ namespace ReviewsSite.Controllers
             if (ModelState.IsValid)
             {
                 reviewRepo.Create(reviews);
-                return RedirectToAction("Details");
+                return RedirectToAction("Details", "Restaurant", new {id=reviews.RestaurantId});
             }
             return View(reviews);
 

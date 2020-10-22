@@ -14,9 +14,10 @@ namespace ReviewsSite.Repositories
             this.db = db;
         }
 
-        public void Create(Reviews obj)
+        public void Create(Reviews review)
         {
-            throw new NotImplementedException();
+            db.Reviews.Add(review);
+            db.SaveChanges();
         }
 
         public IEnumerable<Reviews> GetAll()
