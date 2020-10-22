@@ -29,9 +29,16 @@ namespace ReviewsSite.Repositories
             return db.Reviews.Single(c => c.Id == id);
         }
 
-        public void Update(Reviews obj)
+        public void Update(Reviews review)
         {
-            throw new NotImplementedException();
+            db.Reviews.Update(review);
+            db.SaveChanges();
+        }
+
+        public void Delete(Reviews review)
+        {
+            db.Reviews.Remove(review);
+            db.SaveChanges();
         }
 
     }
