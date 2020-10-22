@@ -60,9 +60,25 @@ namespace ReviewsSite.Controllers
             }
             return View();
         }
-            
 
-            
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+            Reviews model = reviewRepo.GetById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(Reviews review)
+        {
+            reviewRepo.Delete(review);
+
+            return RedirectToAction("Index");
+
+        }
+
+
+
 
     }
 }

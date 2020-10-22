@@ -34,5 +34,11 @@ namespace ReviewsSite.Repositories
             db.SaveChanges();
         }
 
+        public void Delete(Restaurant restaurant)
+        {
+            db.Restaurants.Remove(restaurant);
+            db.SaveChanges();
+        }
+
     }
 }
