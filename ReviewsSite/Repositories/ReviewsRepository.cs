@@ -13,6 +13,13 @@ namespace ReviewsSite.Repositories
         {
             this.db = db;
         }
+
+        public void Create(Reviews review)
+        {
+            db.Reviews.Add(review);
+            db.SaveChanges();
+        }
+
         public IEnumerable<Reviews> GetAll()
         {
             return db.Reviews;

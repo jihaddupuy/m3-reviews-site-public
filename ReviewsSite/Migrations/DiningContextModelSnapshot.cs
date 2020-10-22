@@ -47,7 +47,7 @@ namespace ReviewsSite.Migrations
                             Id = 1,
                             Category = "Seafood",
                             Description = "Cleveland best seafood served on the best patio in town.",
-                            Image = "",
+                            Image = "/Images/that-was-exciting-alley.jpg",
                             Name = "Alley Cat Oyster Bar"
                         },
                         new
@@ -55,7 +55,7 @@ namespace ReviewsSite.Migrations
                             Id = 2,
                             Category = "Asian BBQ",
                             Description = "Asian food grilled for you in front of you",
-                            Image = "",
+                            Image = "/Images/mrgrill.jpg",
                             Name = "bd's Mongolian Grill"
                         },
                         new
@@ -63,7 +63,7 @@ namespace ReviewsSite.Migrations
                             Id = 3,
                             Category = "Diner",
                             Description = "Upscale family restaurant",
-                            Image = "",
+                            Image = "/Images/Tommys-second-location.jpg",
                             Name = "Tommy's On Coventry"
                         });
                 });
