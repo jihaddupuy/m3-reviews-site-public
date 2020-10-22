@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using ReviewsSite.Models;
 using ReviewsSite.Repositories;
 using System;
@@ -36,10 +37,32 @@ namespace ReviewsSite.Controllers
             if (ModelState.IsValid)
             {
                 reviewRepo.Create(reviews);
-                return RedirectToAction("Details", "Restaurant", new {id=reviews.RestaurantId});
+                return RedirectToAction("Details", "Restaurant", new { id = reviews.RestaurantId });
             }
             return View(reviews);
 
         }
+
+        [HttpGet]
+        public ViewResult Update(int id)
+        {
+            Reviews model = reviewRepo.GetById(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Update(Reviews reviews)
+        {
+            if (ModelState.IsValid)
+            {
+                reviewRepo.Update(reviews);
+                return RedirectToAction("Details", "Restaurant", new { id = reviews.RestaurantId });
+            }
+            return View();
+        }
+            
+
+            
+
     }
 }

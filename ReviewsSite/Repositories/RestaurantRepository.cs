@@ -23,9 +23,16 @@ namespace ReviewsSite.Repositories
             return db.Restaurants.Single(c => c.Id == id);
         }
       public void Create(Restaurant restaurant)
-        {
+      {
             db.Restaurants.Add(restaurant);
             db.SaveChanges();
-        }      
+      }
+
+        public void Update(Restaurant restaurant)
+        {
+            db.Restaurants.Update(restaurant);
+            db.SaveChanges();
+        }
+
     }
 }
