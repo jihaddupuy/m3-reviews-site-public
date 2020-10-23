@@ -40,7 +40,6 @@ namespace ReviewsSite.Controllers
                 return RedirectToAction("Details", "Restaurant", new { id = reviews.RestaurantId });
             }
             return View(reviews);
-
         }
 
         [HttpGet]
@@ -74,11 +73,6 @@ namespace ReviewsSite.Controllers
             reviewRepo.Delete(review);
 
             return RedirectToAction("Index");
-
         }
-
-
-
-
     }
 }

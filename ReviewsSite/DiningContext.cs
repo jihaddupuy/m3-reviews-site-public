@@ -14,10 +14,8 @@ namespace ReviewsSite
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var connectionString = "Server=(localdb)\\mssqllocaldb;Database=DiningDB;Trusted_Connection=True";
-
             optionsBuilder.UseSqlServer(connectionString)
             .UseLazyLoadingProxies();
-
             base.OnConfiguring(optionsBuilder);
         }
 
@@ -31,9 +29,6 @@ namespace ReviewsSite
                     Category = "Seafood",
                     Description = "Cleveland best seafood served on the best patio in town.",
                     Image = "/Images/that-was-exciting-alley.jpg"
-
-
-
                 },
 
                 new Restaurant
@@ -43,8 +38,6 @@ namespace ReviewsSite
                     Category = "Asian BBQ",
                     Description = "Asian food grilled for you in front of you",
                     Image = "/Images/mrgrill.jpg"
-                    
-                   
                 },
 
                 new Restaurant
@@ -54,8 +47,6 @@ namespace ReviewsSite
                     Category = "Diner",
                     Description = "Upscale family restaurant",
                     Image = "/Images/Tommys-second-location.jpg"
-                    
-                    
                 });
 
             modelBuilder.Entity<Reviews>().HasData(
@@ -65,7 +56,6 @@ namespace ReviewsSite
                     Content = "Top notch food and setting,the staff was friendly and knowledgable about the variety of seafood.Highly recommended.",
                     RestaurantId = 1
                 },
-
 
                 new Reviews()
                 {
@@ -80,12 +70,8 @@ namespace ReviewsSite
                     Content = "By keeping its focus on balancing its menu between quality meat and vegetable entrees (and at an affordable price) Tommy's achieves its goal of creating  a watering hole where the carnivores and herbivores in your family can graze in peace.",
                     RestaurantId = 3
                 }
-
                 );
-
             base.OnModelCreating(modelBuilder);
-                
         }
-
     }
 }

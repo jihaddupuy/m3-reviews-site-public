@@ -25,7 +25,6 @@ namespace ReviewsSite.Controllers
 
         }
 
-
         public ViewResult Details(int id)
         {
            // RestaurantRepository restaurantRepo = new RestaurantRepository();
